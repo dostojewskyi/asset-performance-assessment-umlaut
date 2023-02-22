@@ -1,0 +1,21 @@
+{
+  "name": "asset-performance-23",
+  "version": "1.0.0",
+  "description": "Cloud and multi Framework architecture for Client focused Asset Performance Tool\"",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc && npm run build:cp-public",
+    "build:cp-public": "xcopy .\\public .\\dist",
+    "type": "tsc --noEmit"
+  },
+  "keywords": [
+    "ACN",
+    "IX",
+    "APA"
+  ],
+  "author": "nikolai.arras",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
