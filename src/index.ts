@@ -1,5 +1,5 @@
 import { makeHomeView } from "./views/home.view.js";
-import { makeNavView } from "./views/navigation.view.js";
+import { makeNavView } from "./views/legacy/navigation.view.js";
 import { renderView } from "./views/views.utils.js";
 
 function init() {

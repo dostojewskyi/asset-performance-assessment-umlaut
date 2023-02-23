@@ -1,4 +1,4 @@
-import { makeList } from "./views.utils.js";
+import { makeList } from "../views.utils.js";
 
 const TECH_USED_LIST = ["Kubernetes", "Azure", "MariaDB"];
 

@@ -1,7 +1,7 @@
-import { makeHomeView } from "./home.view.js";
+import { makeHomeView } from "../home.view.js";
 import { makeTechUsedView } from "./technology-used.view.js";
 import { makeFutureTechUseView } from "./future-technology-use.view.js";
-import { renderView } from "./views.utils.js";
+import { renderView } from "../views.utils.js";
 
 type NavItem = [label: string, viewFn: Function];
 
