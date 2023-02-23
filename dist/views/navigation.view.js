@@ -5,18 +5,17 @@ import { renderView } from "./views.utils.js";
 const NAV_ITEMS = [
     ["Home", makeHomeView],
     ["Technology used", makeTechUsedView],
-    ["Future technology use", makeFutureTechUseView]
+    ["Technology used", makeFutureTechUseView]
 ];
 export function makeNavView() {
     const wrapper = document.createElement("div");
     NAV_ITEMS.forEach((navItem) => {
-        const navLink = makeNavLink(navItem);
+        const navLink = makeNavLink(...navItem);
         wrapper.appendChild(navLink);
     });
     return wrapper;
 }
-function makeNavLink(navItem) {
-    const [label, viewFn] = navItem;
+function makeNavLink(label, viewFn) {
     const link = document.createElement("a");
     link.textContent = label;
     link.addEventListener("click", handleNavClick(viewFn));
@@ -26,7 +25,7 @@ function makeNavLink(navItem) {
 function handleNavClick(viewFn) {
     return function (event) {
         event.preventDefault();
-        renderView(viewFn);
+        renderView(viewFn());
     };
 }
 //# sourceMappingURL=navigation.view.js.map

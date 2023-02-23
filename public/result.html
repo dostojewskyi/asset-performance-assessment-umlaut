@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    <a href="./home.html">Restart your journey here</a>
+    <a href="./survey.html">Restart your survey here</a>
+  </div>
+  <div class="container" id="printableSurveyResults">
+    <h2>Results - Cloud Readiness Check</h2>
+    <h3>Polar-Chart visualization by category</h3>
+    <!-- <button @click="downloadPDF2" class="btn btn-primary btn-lg">
+      Alt jspdf
+    </button> -->
+    <p>{{ chartCreationDate }}</p>
+    <p />
+    <div class="small">
+      <polar-area-chart :chartdata="chartData" :options="chartOptions">
+      </polar-area-chart>
+    </div>
+    <h3>Description</h3>
+    <div class="small">
+      <p class="p_sentences">
+        <b>{{ headKnowledge }} </b> <br />
+        {{ knowledge1Sentence }}
+      </p>
+      <p class="p_sentences">
+        <b>{{ headNeed }} </b> <br />
+        {{ need1Sentence }}
+        {{ need2Sentence }}
+      </p>
+      <p class="p_sentences">
+        <b>{{ headOrga }} </b> <br />
+        {{ organization1Sentence }}
+      </p>
+      <p class="p_sentences">
+        <b>{{ headOper }} </b> <br />
+        {{ operation1Sentence }}
+      </p>
+      <p class="p_sentences">
+        <b>{{ headSec }} </b> <br />
+        {{ security1Sentence }}
+        {{ security2Sentence }}
+      </p>
+      <p class="p_sentences">
+        <b>{{ headFinal }} </b> <br />
+        {{ final1Sentence }}
+      </p>
+      <button  @click="downloadPDF" class="btn btn-primary btn-lg" id="printPageButton">
+        Download Results as PDF! <small>(Print to PDF)</small>
+      </button>
+      <p class="p_main" />
+    </div>
+    <h2>View our Cloud Consulting Services & Solutions!</h2>
+    <br>
+    <br>
+    <div class="expertise">
+      <table align="center">
+        <tr>
+          <td align="center">
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="CCOE"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/Picture2.png"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="Data Governance"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/Picture5.png"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="Crowd Data"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/umlaut_logo.svg"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="Green Cloud"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/umlaut_logo.svg"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="Secure Cloud"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/Picture6.png"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="https://www.umlaut.com/buzz-topics/crowd-sourcing-cloud" target="_blank">
+              <img
+                      alt="Process Mining"
+                      sizes="(min-width: 768px) 50vw, 20vw"
+                      class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+                      src="../assets/Picture7.png"
+              />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">CCoE Services</td>
+          <td align="center">Data Governance Services</td>
+          <td align="center">Crowd Data Solutions</td>
+          <td align="center">Green Cloud Services</td>
+          <td align="center">Secure Cloud Solutions</td>
+          <td align="center">Process Mining Services</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <br>
+    <h2>Get in touch with our experts!</h2>
+    <div class="contactList__person">
+      <img
+              alt="Oliver Rößling"
+              sizes="(min-width: 768px) 50vw, 20vw"
+              class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+              src="../assets/oli.png"
+      />
+      <div class="contactList__content">
+        <h3 class="Headlinestyle__StyledHeadline-sc-1m7b4ye-0 haYEwi">
+          Oliver Rößling
+        </h3>
+        <p
+                class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL contactList__jobTitle"
+        >
+          Cloud Lead
+        </p>
+        <table>
+          <tbody>
+          <tr>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">Phone</p>
+            </td>
+            <td><span class="contactList__spacer"></span></td>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">
+                +49 160 3460316
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">Mail</p>
+            </td>
+            <td><span class="contactList__spacer"></span></td>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">
+                oliver.roessling@umlaut.com
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="contactList__person">
+      <img
+              alt="Nikolai Arras"
+              sizes="(min-width: 768px) 50vw, 20vw"
+              class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+              src="../assets/nxk_circle.png"
+      />
+      <div class="contactList__content">
+        <h3 class="Headlinestyle__StyledHeadline-sc-1m7b4ye-0 haYEwi">
+          Nikolai Arras
+        </h3>
+        <p
+                class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL contactList__jobTitle"
+        >
+          Cloud Expert
+        </p>
+        <table>
+          <tbody>
+          <tr>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">Phone</p>
+            </td>
+            <td><span class="contactList__spacer"></span></td>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">
+                +49 1511 4619162
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">Mail</p>
+            </td>
+            <td><span class="contactList__spacer"></span></td>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">
+                nikolai.arras@umlaut.com
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="contactList__person">
+      <img
+              alt="Sebastian Jansen"
+              sizes="(min-width: 768px) 50vw, 20vw"
+              class="
+            Imagestyle__StyledImage-sc-nelros-0
+            cUzPBC
+            contactList__image contactList__image
+          "
+              src="../assets/SEBJ_circle.png"
+      />
+      <div class="contactList__content">
+        <h3 class="Headlinestyle__StyledHeadline-sc-1m7b4ye-0 haYEwi">
+          Sebastian Jansen
+        </h3>
+        <p
+                class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL contactList__jobTitle"
+        >
+          IT-Associate
+        </p>
+        <table>
+          <tbody>
+          <tr>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">Mail</p>
+            </td>
+            <td><span class="contactList__spacer"></span></td>
+            <td>
+              <p class="Copystyle__StyledCopy-sc-uif54k-0 hIyhL">
+                sebastian.jansen@umlaut.com
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
