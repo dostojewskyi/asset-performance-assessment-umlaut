@@ -32,8 +32,9 @@ export function makeSpan(text) {
     span.textContent = text;
     return span;
 }
-export function renderView(view) {
+export function renderView(viewFn) {
     const wrapper = clearMainWrapper();
+    const view = viewFn();
     wrapper === null || wrapper === void 0 ? void 0 : wrapper.appendChild(view);
 }
 function clearMainWrapper() {

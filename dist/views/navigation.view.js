@@ -1,23 +1,22 @@
-import { makeAboutSimonView } from "./about-simon.view.js";
-import { makeAboutSiteView } from "./about-this-site.view.js";
 import { makeHomeView } from "./home.view.js";
 import { makeTechUsedView } from "./technology-used.view.js";
+import { makeFutureTechUseView } from "./future-technology-use.view.js";
 import { renderView } from "./views.utils.js";
 const NAV_ITEMS = [
     ["Home", makeHomeView],
-    ["About this site", makeAboutSiteView],
-    ["About Simon", makeAboutSimonView],
     ["Technology used", makeTechUsedView],
+    ["Future technology use", makeFutureTechUseView]
 ];
 export function makeNavView() {
     const wrapper = document.createElement("div");
     NAV_ITEMS.forEach((navItem) => {
-        const navLink = makeNavLink(...navItem);
+        const navLink = makeNavLink(navItem);
         wrapper.appendChild(navLink);
     });
     return wrapper;
 }
-function makeNavLink(label, viewFn) {
+function makeNavLink(navItem) {
+    const [label, viewFn] = navItem;
     const link = document.createElement("a");
     link.textContent = label;
     link.addEventListener("click", handleNavClick(viewFn));
@@ -27,7 +26,7 @@ function makeNavLink(label, viewFn) {
 function handleNavClick(viewFn) {
     return function (event) {
         event.preventDefault();
-        renderView(viewFn());
+        renderView(viewFn);
     };
 }
 //# sourceMappingURL=navigation.view.js.map

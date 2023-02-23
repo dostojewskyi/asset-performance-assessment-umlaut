@@ -1,9 +1,11 @@
-"use strict";
-function helloWorld() {
-    const element = document.getElementById("hello-world");
-    if (element) {
-        element.textContent = "Hello, World!";
-    }
+import { makeHomeView } from "./views/home.view.js";
+import { makeNavView } from "./views/navigation.view.js";
+import { renderView } from "./views/views.utils.js";
+function init() {
+    const navSection = document.getElementById("section-nav");
+    const navView = makeNavView();
+    navSection === null || navSection === void 0 ? void 0 : navSection.appendChild(navView);
+    renderView(makeHomeView);
 }
-helloWorld();
+init();
 //# sourceMappingURL=index.js.map
